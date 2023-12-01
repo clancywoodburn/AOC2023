@@ -1,16 +1,5 @@
-import subprocess
-
-def copy2clip(txt):
-	cmd='echo '+txt.strip()+'|clip'
-	print(txt)
-	return subprocess.check_call(cmd, shell=True)
-
-
-
-
 f = open("input.txt").read().strip().split("\n")
-# f = [int(i) for i in f]
-# f = [[int(j)] for j in i.split(" ") for i in f]
+
 o = 0
 for i in range(len(f)):
 	x = f[i]
@@ -26,6 +15,3 @@ for i in range(len(f)):
 		
 	o+= int(y[0]+y[-1])
 print(o)
-
-
-copy2clip(str(o))
