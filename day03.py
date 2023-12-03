@@ -37,7 +37,7 @@ def gears(i,j):
 	c = 0
 	for x in [-1,0,1]:
 		for y in [-1,0,1]:
-			if (g := get_num(i+x,j+y)) != "":
+			if (g:=get_num(i+x,j+y))!= "":
 				o *= int(g)
 				c += 1
 	if c == 2: return o
@@ -48,7 +48,7 @@ p2 = 0
 for i in range(len(f)):
 	for j in range(len(f[i])):
 		if f[i][j] == "*":
-			if (g := gears(i,j)) != -1:
+			if (g:=gears(i,j)) != -1:
 				p2 += g
 
 for i in range(len(f)):
